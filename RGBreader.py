@@ -19,12 +19,14 @@ def checkIfRoomIsBooked(x, y):
     b = (pix[2])
 
     if (r == bookedColor[0] and g == bookedColor[1] and b == bookedColor[2]):
+        return True
         print("Room is booked.")
         """
         The current position of the cursor is a booked room.
         The code in here should choose a new room and check again.
         """
     else:
+        return False
         print("Room is not booked.")
         """
         The room is not booked, continue to book it.
