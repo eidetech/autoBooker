@@ -4,6 +4,7 @@
 # Libraries
 import time
 import random
+import selectDay
 from time import sleep
 """
 import os
@@ -14,7 +15,7 @@ if os.environ.get('DISPLAY','') == '':
 import pynput
 from pynput.mouse import Button, Controller
 mouse = Controller()
-preferredRoom = "A2 042"
+preferredRoom = "A2 045"
 xOffset = 182
 yOffset = 63
 
@@ -144,14 +145,17 @@ elif(x.strftime("%A") == "Saturday"):
     mouse.position=(715, 820)
     mouse.click(Button.left, 1)
     sleep(3)
-elif(x.strftime("%A") == "Sunday"):
-    # Choose Sunday
-    mouse.position=(740,815)
-    mouse.click(Button.left, 1)
-    sleep(3)
-    mouse.position=(715, 820)
-    mouse.click(Button.left, 1)
-    sleep(3)
+    elif(x.strftime("%A") == "Sunday"):
+    if(checkIfRoomIsBooked(740, 815) == False):
+        # Choose next Monday
+        mouse.position=(740,815)
+        mouse.click(Button.left, 1)
+        sleep(3)
+        mouse.position=(715, 820)
+        mouse.click(Button.left, 1)
+        sleep(3)
+    else:
+        selectDay.selectNewRoom()
 
 # Select end time dropdown
 mouse.position=(856, 775)
