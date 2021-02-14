@@ -1,4 +1,9 @@
-import pyautogui
+import pyautogui # https://pyautogui.readthedocs.io/
+
+"""
+Command for installing pyautogui on linux: python3 -m pip install pyautogui
+Command for installing pyautogui on windows: py -m pip install pyautogui
+"""
 
 # pyautogui.displayMousePosition() # Function to get RGB values current mouse position
 
