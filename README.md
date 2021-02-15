@@ -2,11 +2,8 @@
 TimeEdit autoBooker
 
 ## Installation
-
-Use the package manager python3 -m pip install pyautogui
-
 ```bash
-pip install foobar
+python3 -m pip install pyautogui
 ```
 
 ## Usage
