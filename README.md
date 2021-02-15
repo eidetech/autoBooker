@@ -10,8 +10,10 @@ python3 -m pip install pynput
 
 ## Usage
 Put preferred rooms in preferredRooms.csv, one room per line.
-```python
-import test
+```csv
+C3 090
+C3 091
+C3 092
 ```
 
 ## Check number of code lines
