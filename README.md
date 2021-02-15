@@ -1,7 +1,6 @@
+<a href="#"><img src="https://www.timeedit.net/assets/images/te_icon_gradient_vit_rounded@1x.png" width="100" height="100"></a>
 # autoBooker
 TimeEdit autoBooker
-
-<a href="#"><img src="https://www.timeedit.net/assets/images/te_icon_gradient_vit_rounded@1x.png" width="100" height="100"></a>
 
 ## Installation
 ```bash
