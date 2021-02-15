@@ -21,5 +21,5 @@ C3 092
 cd /home/pi/autoBooker/
 git ls-files | xargs wc -l
 ```
-
+Last checked: 15.02.2021 --> 471
 
