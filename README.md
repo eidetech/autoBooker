@@ -4,6 +4,7 @@ TimeEdit autoBooker
 ## Installation
 ```bash
 python3 -m pip install pyautogui
+pip install pynput
 ```
 
 ## Usage
