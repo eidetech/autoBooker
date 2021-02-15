@@ -13,3 +13,5 @@ Put preferred rooms in preferredRooms.csv, one room per line.
 ```python
 import test
 ```
+
+git ls-files | xargs wc -l
