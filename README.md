@@ -14,4 +14,10 @@ Put preferred rooms in preferredRooms.csv, one room per line.
 import test
 ```
 
+## Check number of code lines
+```bash
+cd /home/pi/autoBooker/
 git ls-files | xargs wc -l
+```
+
+
