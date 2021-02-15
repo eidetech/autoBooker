@@ -1,21 +1,26 @@
-# TimeEdit autoBooker v0.3
+# TimeEdit autoBooker v0.4
 # Raspberry Pi desktop
 
 # Libraries
+from sys import path
+path.append("/home/pi/Documents/")
+import RGBreader
+import selectDay
 import time
 import random
-import selectDay
 from time import sleep
+import pynput
+from pynput.mouse import Button, Controller
+
 """
 import os
 if os.environ.get('DISPLAY','') == '':
     print('no display found. Using :0.0')
     os.environ.__setitem__('DISPLAY', ':0.0')
 """
-import pynput
-from pynput.mouse import Button, Controller
+
 mouse = Controller()
-preferredRoom = "A2 045"
+preferredRoom = "A2 071"
 xOffset = 182
 yOffset = 63
 
@@ -24,13 +29,14 @@ def bookingDesc(x):
     1 : "Ibsens ripsbaerbusker og andre buskvekster",
     2 : "retskevksub erdna go reksubreabspir snesbI",
     3 : "The Big Bang Theory",
-    4 : "Fylkestrafikksikkerhetsutvalgssekretariatslederfunksjon ",
+    4 : "Fylkestrafikksikkerhetsutvalgssekretariatslederfunksjon",
     5 : "Landsdelsberedskapsfylkesmannsembetene",
     6 : "Forsiktighetsforanstaltning",
     7 : "Pneumonoultramicroscopicsilicovolcanoconiosis",
     8 : "Honorificabilitudinitatibus",
     9 : "Floccinaucinihilipilification",
-    10 : "Eit ord, ein stein i ei kald elv. Ein stein til - Eg lyt ha fleire steinar skal eg koma over."
+    10 : "Eit ord, ein stein i ei kald elv. Ein stein til.",
+    11 : "Eg lyt ha fleire steinar skal eg koma over."
 }
     return (texts.get(x, "Whoops, Python n00bed"))
 
@@ -98,55 +104,79 @@ import datetime
 x = datetime.datetime.now()
 xSkip = 170 # Pixels to skip for each week day
 if (x.strftime("%A") == "Monday"):
-    # Choose Monday
-    mouse.position=(740+xSkip,815)
-    mouse.click(Button.left, 1)
-    sleep(3)
-    mouse.position=(715, 820)
-    mouse.click(Button.left, 1)
-    sleep(3)
+    if(RGBreader.checkIfRoomIsBooked(740+xSkip, 815) == False):
+        # Choose next Tuesday
+        mouse.position=(740+xSkip,815)
+        mouse.click(Button.left, 1)
+        sleep(3)
+        mouse.position=(715, 820)
+        mouse.click(Button.left, 1)
+        sleep(3)
+    else:
+        print("Preferred room is booked, trying next one.")
+        selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Tuesday"):
-    # Choose Tuesday
-    mouse.position=(740+(2*xSkip),815)
-    mouse.click(Button.left, 1)
-    sleep(3)
-    mouse.position=(715, 820)
-    mouse.click(Button.left, 1)
-    sleep(3)
+    if(RGBreader.checkIfRoomIsBooked(740+(2*xSkip), 815) == False):
+        # Choose next Wednesday
+        mouse.position=(740+(2*xSkip),815)
+        mouse.click(Button.left, 1)
+        sleep(3)
+        mouse.position=(715, 820)
+        mouse.click(Button.left, 1)
+        sleep(3)
+    else:
+        print("Preferred room is booked, trying next one.")
+        selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Wednesday"):
-    # Choose Wednesday
-    mouse.position=(740+(3*xSkip),815)
-    mouse.click(Button.left, 1)
-    sleep(3)
-    mouse.position=(715, 820)
-    mouse.click(Button.left, 1)
-    sleep(3)
+    if(RGBreader.checkIfRoomIsBooked(740+(3*xSkip), 815) == False):
+        # Choose next Thursday
+        mouse.position=(740+(3*xSkip),815)
+        mouse.click(Button.left, 1)
+        sleep(3)
+        mouse.position=(715, 820)
+        mouse.click(Button.left, 1)
+        sleep(3)
+    else:
+        print("Preferred room is booked, trying next one.")
+        selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Thursday"):
-    # Choose Thursday
-    mouse.position=(740+(4*xSkip),815)
-    mouse.click(Button.left, 1)
-    sleep(3)
-    mouse.position=(715, 820)
-    mouse.click(Button.left, 1)
-    sleep(3)
+    if(RGBreader.checkIfRoomIsBooked(740+(4*xSkip), 815) == False):
+        # Choose next Friday
+        mouse.position=(740+(4*xSkip),815)
+        mouse.click(Button.left, 1)
+        sleep(3)
+        mouse.position=(715, 820)
+        mouse.click(Button.left, 1)
+        sleep(3)
+    else:
+        print("Preferred room is booked, trying next one.")
+        selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Friday"):
-    # Choose Friday
-    mouse.position=(740+(5*xSkip),815)
-    mouse.click(Button.left, 1)
-    sleep(3)
-    mouse.position=(715, 820)
-    mouse.click(Button.left, 1)
-    sleep(3)
+    if(RGBreader.checkIfRoomIsBooked(740+(5*xSkip), 815) == False):
+        # Choose next Saturday
+        mouse.position=(740+(5*xSkip),815)
+        mouse.click(Button.left, 1)
+        sleep(3)
+        mouse.position=(715, 820)
+        mouse.click(Button.left, 1)
+        sleep(3)
+    else:
+        print("Preferred room is booked, trying next one.")
+        selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Saturday"):
-    # Choose Saturday
-    mouse.position=(740+(6*xSkip),815)
-    mouse.click(Button.left, 1)
-    sleep(3)
-    mouse.position=(715, 820)
-    mouse.click(Button.left, 1)
-    sleep(3)
-    elif(x.strftime("%A") == "Sunday"):
-    if(checkIfRoomIsBooked(740, 815) == False):
+    if(RGBreader.checkIfRoomIsBooked(740+(6*xSkip), 815) == False):
+        # Choose next Sunday
+        mouse.position=(740+(6*xSkip),815)
+        mouse.click(Button.left, 1)
+        sleep(3)
+        mouse.position=(715, 820)
+        mouse.click(Button.left, 1)
+        sleep(3)
+    else:
+        print("Preferred room is booked, trying next one.")
+        selectDay.selectNewRoom(0)
+elif(x.strftime("%A") == "Sunday"):
+    if(RGBreader.checkIfRoomIsBooked(740, 815) == False):
         # Choose next Monday
         mouse.position=(740,815)
         mouse.click(Button.left, 1)
@@ -155,7 +185,9 @@ elif(x.strftime("%A") == "Saturday"):
         mouse.click(Button.left, 1)
         sleep(3)
     else:
-        selectDay.selectNewRoom()
+        print("Preferred room is booked, trying next one.")
+        selectDay.selectNewRoom(0)
+
 
 # Select end time dropdown
 mouse.position=(856, 775)
