@@ -4,20 +4,11 @@ TimeEdit autoBooker
 ## Installation
 ```bash
 python3 -m pip install pyautogui
-pip install pynput
+python3 -m pip install pynput
 ```
 
 ## Usage
 
 ```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+import test
 ```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
