@@ -17,9 +17,9 @@ C3 092
 ```
 
 ## File structure/hierarchy
-autoBooker.py - Main
-RGBchecker.py - Check if room is already booked
-selectDay.py  - Try next room in preferredRooms.csv list if the top preferred room is already booked
+- autoBooker.py - Main
+- RGBchecker.py - Check if room is already booked
+- selectDay.py  - Try next room in preferredRooms.csv list if the top preferred room is already booked
 
 ## Check number of code lines
 ```bash
