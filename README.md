@@ -21,6 +21,12 @@ C3 092
   - RGBchecker.py - Check if room is already booked
   - selectDay.py  - Try next room in preferredRooms.csv list if the top preferred room is already booked
 
+# Tasks
+- [x] Initial concept!
+- [x] Avoid already booked rooms detection
+- [x] If room is already booked: choose new room from a list of preferred rooms
+- [ ] Dual user booking
+- [ ] Automatic Sheets integration (Sheets API) 
 ## Check number of code lines
 ```bash
 cd /home/pi/autoBooker/
