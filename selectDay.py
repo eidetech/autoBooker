@@ -9,7 +9,7 @@ def selectNewRoom(y):
 
     rooms = {}
     i = 0
-    with open('/home/pi/Documents/preferredRooms.csv', 'r') as f:
+    with open('/home/pi/autoBooker/preferredRooms.csv', 'r') as f:
         reader = csv.reader(f)
         for row in reader:
             rooms[i] = (row[0])
