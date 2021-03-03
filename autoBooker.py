@@ -1,4 +1,4 @@
-# TimeEdit autoBooker v0.4
+# TimeEdit autoBooker v0.5
 # Raspberry Pi desktop
 
 # Libraries
@@ -6,6 +6,7 @@ from sys import path
 path.append("/home/pi/Documents/")
 import RGBreader
 import selectDay
+import sheets
 import time
 import random
 from time import sleep
@@ -241,6 +242,9 @@ mouse.position=(858, 993)
 mouse.click(Button.left, 1)
 sleep(10)
 
+# Insert booking data to Google spreadsheet
+insertToSheets(preferredRoom, "08:30 - 11:30")
+
 # Close incognito window
 mouse.position=(1905, 48)
 mouse.click(Button.left, 2)
@@ -255,7 +259,3 @@ sleep(2)
 mouse.position=(1905, 48)
 mouse.click(Button.left, 2)
 sleep(2)
-
-
-
-
