@@ -242,7 +242,7 @@ mouse.click(Button.left, 1)
 sleep(10)
 
 # Insert booking data to Google spreadsheet
-insertToSheets(preferredRoom, "08:30 - 11:30")
+sheets.insertToSheets(preferredRoom, "08:30 - 11:30")
 
 # Close incognito window
 mouse.position=(1905, 48)
