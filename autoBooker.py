@@ -83,7 +83,6 @@ mouse.position=(107, 675)
 mouse.click(Button.left, 1)
 sleep(3)
 
-
 # Select room
 from pynput.keyboard import Key, Controller
 keyboard = Controller()
@@ -115,7 +114,7 @@ if (x.strftime("%A") == "Monday"):
         sleep(3)
     else:
         print("Preferred room is booked, trying next one.")
-        selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Tuesday"):
     if(RGBreader.checkIfRoomIsBooked(740+(2*xSkip), 815) == False):
         # Choose next Wednesday
@@ -127,7 +126,7 @@ elif(x.strftime("%A") == "Tuesday"):
         sleep(3)
     else:
         print("Preferred room is booked, trying next one.")
-        selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Wednesday"):
     if(RGBreader.checkIfRoomIsBooked(740+(3*xSkip), 815) == False):
         # Choose next Thursday
@@ -139,7 +138,7 @@ elif(x.strftime("%A") == "Wednesday"):
         sleep(3)
     else:
         print("Preferred room is booked, trying next one.")
-        selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Thursday"):
     if(RGBreader.checkIfRoomIsBooked(740+(4*xSkip), 815) == False):
         # Choose next Friday
@@ -151,7 +150,7 @@ elif(x.strftime("%A") == "Thursday"):
         sleep(3)
     else:
         print("Preferred room is booked, trying next one.")
-        selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Friday"):
     if(RGBreader.checkIfRoomIsBooked(740+(5*xSkip), 815) == False):
         # Choose next Saturday
@@ -163,7 +162,7 @@ elif(x.strftime("%A") == "Friday"):
         sleep(3)
     else:
         print("Preferred room is booked, trying next one.")
-        selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Saturday"):
     if(RGBreader.checkIfRoomIsBooked(740+(6*xSkip), 815) == False):
         # Choose next Sunday
@@ -175,7 +174,7 @@ elif(x.strftime("%A") == "Saturday"):
         sleep(3)
     else:
         print("Preferred room is booked, trying next one.")
-        selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Sunday"):
     if(RGBreader.checkIfRoomIsBooked(740, 815) == False):
         # Choose next Monday
@@ -187,7 +186,7 @@ elif(x.strftime("%A") == "Sunday"):
         sleep(3)
     else:
         print("Preferred room is booked, trying next one.")
-        selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(0)
 
 
 # Select end time dropdown
