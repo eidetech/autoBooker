@@ -3,7 +3,7 @@
 
 # Libraries
 from sys import path
-path.append("/home/pi/Documents/")
+path.append("/home/pi/autoBooker/")
 import RGBreader
 import selectDay
 import sheets
