@@ -21,8 +21,8 @@ C3 092
 1. autoBooker.py - Main
   - selectDay.py  - Try next room in preferredRooms.csv list if the top preferred room is already booked.
   - scan.py - Function to completely scan the day block to be booked in TimeEdit.
-    - RGBchecker.py - Check if room is already booked. 
-  - sheets.py - Google Sheets integration -> interts booking data to spreadsheet.
+    - RGBchecker.py - Check if room is already booked. Used by scan.py
+  - sheets.py - Google Sheets integration &#8594; interts booking data to spreadsheet.
 
 ## Tasks
 - [x] Initial concept!
@@ -36,5 +36,7 @@ C3 092
 cd /home/pi/autoBooker/
 git ls-files | xargs wc -l
 ```
-Last checked: 15.02.2021 --> 471
+Checkpoints: 
+1. 15.02.2021 &#8594; 471
+2. 05.03.2021 &#8594; 635
 
