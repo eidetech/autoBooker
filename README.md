@@ -38,5 +38,5 @@ git ls-files | xargs wc -l
 ```
 Checkpoints: 
 1. 15.02.2021 &#8594; 471 lines of code
-2. 05.03.2021 &#8594; 63 lines of code
+2. 05.03.2021 &#8594; 635 lines of code
 
