@@ -65,7 +65,7 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Tuesday"):
         if(scan.scanDay("Tuesday") == False):
@@ -77,7 +77,7 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Wednesday"):
         if(scan.scanDay("Wednesday") == False):
@@ -89,7 +89,7 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Thursday"):
         if(scan.scanDay("Thursday") == False):
@@ -101,7 +101,7 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Friday"):
         if(scan.scanDay("Friday") == False):
@@ -113,7 +113,7 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Saturday"):
         if(scan.scanDay("Saturday") == False):
@@ -125,7 +125,7 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Sunday"):
         if(scan.scanDay("Sunday") == False):
@@ -137,6 +137,6 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
             
