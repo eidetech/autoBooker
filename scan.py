@@ -73,5 +73,3 @@ def scanDay(day):
         x=x+10
         sleep(0.1)
     return isBooked
-
-print(scanDay("Saturday"))
