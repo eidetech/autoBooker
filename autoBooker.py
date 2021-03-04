@@ -41,49 +41,59 @@ def bookingDesc(x):
     return (texts.get(x, "Whoops, Python n00bed"))
 
 # Open Chromium
+print("Open Chromium")
 mouse.position=(66, 20)
 mouse.click(Button.left, 1)
 sleep(10)
 
 # Chromium settings button
+print("Chromium settings button")
 mouse.position=(1897, 114)
 mouse.click(Button.left, 1)
 sleep(1)
 
 # Open new incognito window
+print("Open new incognito window")
 mouse.position=(1682, 204)
 mouse.click(Button.left, 1)
 sleep(3)
 
 # TimeEdit click
+print("TimeEdit click")
 mouse.position=(158,149)
 mouse.click(Button.left, 1)
 sleep(3)
 
 # Feide palogging click
+print("Feide palogging click")
 mouse.position=(739+xOffset,409+yOffset)
 mouse.click(Button.left, 1)
 sleep(5)
 
 # Input field click
+print("Input field click")
 mouse.position=(792, 568)
 mouse.click(Button.left, 1)
 sleep(2)
 # Select user data click
+print("Select user data click")
 mouse.position=(792, 618)
 mouse.click(Button.left, 1)
 sleep(2)
 # Login button click
+print("Login button click")
 mouse.position=(959, 793)
 mouse.click(Button.left, 1)
 sleep(8)
 # Room searchbox click
+print("Room searchbox click")
 mouse.position=(107, 675)
 mouse.click(Button.left, 1)
 sleep(3)
 
 
 # Select room
+print("Select room")
 from pynput.keyboard import Key, Controller
 keyboard = Controller()
 for char in preferredRoom:
@@ -96,12 +106,14 @@ from pynput.mouse import Button, Controller
 mouse = Controller()
 
 # Choose next week click
+print("Choose next week click")
 mouse.position=(1053, 730)
 mouse.click(Button.left, 1)
 sleep(3)
 
 import datetime
 x = datetime.datetime.now()
+print(x.strftime("%A"))
 xSkip = 170 # Pixels to skip for each week day
 if (x.strftime("%A") == "Monday"):
     if(RGBreader.checkIfRoomIsBooked(740+xSkip, 815) == False):
