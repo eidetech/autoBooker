@@ -9,19 +9,22 @@ import selectDay
 import scan
 import time
 import random
+import csv
 from time import sleep
 import pynput
 from pynput.mouse import Button, Controller
 
-"""
-import os
-if os.environ.get('DISPLAY','') == '':
-    print('no display found. Using :0.0')
-    os.environ.__setitem__('DISPLAY', ':0.0')
-"""
-
 mouse = Controller()
-preferredRoom = "A2 045"
+
+rooms = {}
+i = 0
+with open('/home/pi/autoBooker/preferredRooms.csv', 'r') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        rooms[i] = (row[0])
+        i = i+1
+
+preferredRoom = rooms[1]
 xOffset = 182
 yOffset = 63
 
@@ -114,7 +117,7 @@ sleep(3)
 
 import datetime
 x = datetime.datetime.now()
-print(x.strftime("%A"))
+print("Day of week: " + x.strftime("%A") + ", meaning that autoBooker will book the following day of the following week.")
 xSkip = 170 # Pixels to skip for each week day
 if (x.strftime("%A") == "Monday"):
     if(scan.scanDay("Monday") == False):
