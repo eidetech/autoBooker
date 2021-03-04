@@ -37,6 +37,6 @@ cd /home/pi/autoBooker/
 git ls-files | xargs wc -l
 ```
 Checkpoints: 
-1. 15.02.2021 &#8594; 471
-2. 05.03.2021 &#8594; 635
+1. 15.02.2021 &#8594; 471 lines
+2. 05.03.2021 &#8594; 635 lines
 
