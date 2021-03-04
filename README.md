@@ -27,7 +27,7 @@ C3 092
 - [x] Avoid already booked rooms detection
 - [x] If room is already booked: choose new room from a list of preferred rooms
 - [ ] Dual user booking
-- [ ] Automatic Google Sheets integration (Sheets API) 
+- [x] Automatic Google Sheets integration (Sheets API) 
 - [ ] Automatic Google Calendar integration (Calendar API)
 ## Check number of code lines
 ```bash
