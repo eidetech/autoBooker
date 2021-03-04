@@ -18,7 +18,7 @@ C3 092
 ```
 
 ## File structure/hierarchy
-1 autoBooker.py - Main
+1. autoBooker.py - Main
   - selectDay.py  - Try next room in preferredRooms.csv list if the top preferred room is already booked.
   - scan.py - Function to completely scan the day block to be booked in TimeEdit.
     - RGBchecker.py - Check if room is already booked. 
