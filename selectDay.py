@@ -1,5 +1,6 @@
 def selectNewRoom(y):
     import RGBreader
+    import scan
     import pynput
     from pynput.mouse import Button, Controller
     mouse = Controller()
