@@ -139,4 +139,7 @@ def selectNewRoom(y):
         else:
             print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
+
+    preferredRoom = rooms[y]
+    return rooms[y]
             

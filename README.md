@@ -6,6 +6,7 @@ TimeEdit autoBooker script (is all you need, and life is easy :grin:)
 ```bash
 python3 -m pip install pyautogui
 python3 -m pip install pynput
+python3 -m pip install gspread
 ```
 
 ## Usage
