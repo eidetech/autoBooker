@@ -117,7 +117,7 @@ x = datetime.datetime.now()
 print(x.strftime("%A"))
 xSkip = 170 # Pixels to skip for each week day
 if (x.strftime("%A") == "Monday"):
-    if(scan.scanDay("Tuesday")) == False):
+    if(scan.scanDay("Tuesday") == False):
         # Choose next Tuesday
         mouse.position=(740+xSkip,815)
         mouse.click(Button.left, 1)
@@ -129,7 +129,7 @@ if (x.strftime("%A") == "Monday"):
         print("Preferred room is booked, trying next one.")
         selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Tuesday"):
-    if(scan.scanDay("Wednesday")) == False):
+    if(scan.scanDay("Wednesday") == False):
         # Choose next Wednesday
         mouse.position=(740+(2*xSkip),815)
         mouse.click(Button.left, 1)
@@ -141,7 +141,7 @@ elif(x.strftime("%A") == "Tuesday"):
         print("Preferred room is booked, trying next one.")
         selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Wednesday"):
-    if(scan.scanDay("Thursday")) == False):
+    if(scan.scanDay("Thursday") == False):
         # Choose next Thursday
         mouse.position=(740+(3*xSkip),815)
         mouse.click(Button.left, 1)
@@ -153,7 +153,7 @@ elif(x.strftime("%A") == "Wednesday"):
         print("Preferred room is booked, trying next one.")
         selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Thursday"):
-    if(scan.scanDay("Friday")) == False):
+    if(scan.scanDay("Friday") == False):
         # Choose next Friday
         mouse.position=(740+(4*xSkip),815)
         mouse.click(Button.left, 1)
@@ -165,7 +165,7 @@ elif(x.strftime("%A") == "Thursday"):
         print("Preferred room is booked, trying next one.")
         selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Friday"):
-    if(scan.scanDay("Saturday")) == False):
+    if(scan.scanDay("Saturday") == False):
         # Choose next Saturday
         mouse.position=(740+(5*xSkip),815)
         mouse.click(Button.left, 1)
@@ -177,7 +177,7 @@ elif(x.strftime("%A") == "Friday"):
         print("Preferred room is booked, trying next one.")
         selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Saturday"):
-    if(scan.scanDay("Sunday")) == False):
+    if(scan.scanDay("Sunday") == False):
         # Choose next Sunday
         mouse.position=(740+(6*xSkip),815)
         mouse.click(Button.left, 1)
@@ -189,7 +189,7 @@ elif(x.strftime("%A") == "Saturday"):
         print("Preferred room is booked, trying next one.")
         selectDay.selectNewRoom(0)
 elif(x.strftime("%A") == "Sunday"):
-    if(scan.scanDay("Monday")) == False):
+    if(scan.scanDay("Monday") == False):
         # Choose next Monday
         mouse.position=(740,815)
         mouse.click(Button.left, 1)
