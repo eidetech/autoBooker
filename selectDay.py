@@ -1,5 +1,6 @@
 def selectNewRoom(y):
     import RGBreader
+    import scan
     import pynput
     from pynput.mouse import Button, Controller
     mouse = Controller()
@@ -55,7 +56,7 @@ def selectNewRoom(y):
     x = datetime.datetime.now()
     xSkip = 170 # Pixels to skip for each week day
     if (x.strftime("%A") == "Monday"):
-        if(RGBreader.checkIfRoomIsBooked(740+xSkip, 815) == False):
+        if(scan.scanDay("Monday") == False):
             # Choose next Tuesday
             mouse.position=(740+xSkip,815)
             mouse.click(Button.left, 1)
@@ -64,10 +65,10 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Tuesday"):
-        if(RGBreader.checkIfRoomIsBooked(740+(2*xSkip), 815) == False):
+        if(scan.scanDay("Tuesday") == False):
             # Choose next Wednesday
             mouse.position=(740+(2*xSkip),815)
             mouse.click(Button.left, 1)
@@ -76,10 +77,10 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Wednesday"):
-        if(RGBreader.checkIfRoomIsBooked(740+(3*xSkip), 815) == False):
+        if(scan.scanDay("Wednesday") == False):
             # Choose next Thursday
             mouse.position=(740+(3*xSkip),815)
             mouse.click(Button.left, 1)
@@ -88,10 +89,10 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Thursday"):
-        if(RGBreader.checkIfRoomIsBooked(740+(4*xSkip), 815) == False):
+        if(scan.scanDay("Thursday") == False):
             # Choose next Friday
             mouse.position=(740+(4*xSkip),815)
             mouse.click(Button.left, 1)
@@ -100,10 +101,10 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Friday"):
-        if(RGBreader.checkIfRoomIsBooked(740+(5*xSkip), 815) == False):
+        if(scan.scanDay("Friday") == False):
             # Choose next Saturday
             mouse.position=(740+(5*xSkip),815)
             mouse.click(Button.left, 1)
@@ -112,10 +113,10 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Saturday"):
-        if(RGBreader.checkIfRoomIsBooked(740+(6*xSkip), 815) == False):
+        if(scan.scanDay("Saturday") == False):
             # Choose next Sunday
             mouse.position=(740+(6*xSkip),815)
             mouse.click(Button.left, 1)
@@ -124,10 +125,10 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Sunday"):
-        if(RGBreader.checkIfRoomIsBooked(740, 815) == False):
+        if(scan.scanDay("Sunday") == False):
             # Choose next Monday
             mouse.position=(740,815)
             mouse.click(Button.left, 1)
@@ -136,7 +137,7 @@ def selectNewRoom(y):
             mouse.click(Button.left, 1)
             sleep(3)
         else:
-            print("Preferred room is booked, trying next one.")
+            print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
 
     preferredRoom = rooms[y]
