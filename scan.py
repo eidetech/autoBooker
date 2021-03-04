@@ -11,50 +11,50 @@ def scanDay(day):
     isBooked = {} # Define return variable
     if (day == "Monday"):
         # Check if selected room is booked next Tuesday
-        x = 1167
-        y = 745
+        x = 832
+        y = 815
         xPos = x
         #DEBUG move mouse pos to start:
         #mouse.position=(x,y)
     elif(day == "Tuesday"):
         # Check if selected room is booked next Wednesday
-        x = 1167
-        y = 745
+        x = 999
+        y = 815
         xPos = x
         #DEBUG move mouse pos to start:
         #mouse.position=(x,y)
     elif(day == "Wednesday"):
         # Check if selected room is booked next Thursday
-        x = 1167
-        y = 745
+        x = 1166
+        y = 815
         xPos = x
         #DEBUG move mouse pos to start:
         #mouse.position=(x,y)
     elif(day == "Thursday"):
         # Check if selected room is booked next Friday
-        x = 1167
-        y = 745
+        x = 1334
+        y = 815
         xPos = x
         #DEBUG move mouse pos to start:
         #mouse.position=(x,y)
     elif(day == "Friday"):
         # Check if selected room is booked next Saturday
-        x = 1167
-        y = 745
+        x = 1502
+        y = 815
         xPos = x
         #DEBUG move mouse pos to start:
         #mouse.position=(x,y)
     elif(day == "Saturday"):
         # Check if selected room is booked next Sunday
-        x = 1167
-        y = 745
+        x = 1668
+        y = 815
         xPos = x
         #DEBUG move mouse pos to start:
         #mouse.position=(x,y)
     elif(day == "Sunday"):
         # Check if selected room is booked next Monday
-        x = 1167
-        y = 745
+        x = 665
+        y = 815
         xPos = x
         #DEBUG move mouse pos to start:
         #mouse.position=(x,y)
