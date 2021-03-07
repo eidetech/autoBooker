@@ -204,21 +204,26 @@ elif(x.strftime("%A") == "Sunday"):
         print("Preferred room " + rooms[0] + " is booked, trying next one.")
         preferredRoom = selectDay.selectNewRoom(1)
 
+print("Room " + preferredRoom + " is clear, and selected.")
 
 # Select end time dropdown
+print("Select end time dropdown")
 mouse.position=(856, 775)
 mouse.click(Button.left, 1)
 sleep(2)
 # Select 1130 end time
+print("Select 1130 end time")
 mouse.position=(861, 1007)
 mouse.click(Button.left, 1)
 sleep(2)
 # Select textbox for heading
+print("Select textbox for heading")
 mouse.position=(900, 950)
 mouse.click(Button.left, 1)
 sleep(1)
 
 # Write booking heading
+print("Write booking heading")
 from pynput.keyboard import Key, Controller
 keyboard = Controller()
 
@@ -234,16 +239,19 @@ from pynput.mouse import Button, Controller
 mouse = Controller()
 
 # Reserve
+print("Reserve")
 mouse.position=(964, 1051)
 mouse.click(Button.left, 1)
 sleep(5)
 
 # Send confirmation
+print("Send confirmation")
 mouse.position=(1019, 903)
 mouse.click(Button.left, 1)
 sleep(5)
 
 # Scroll down
+print("Scroll down")
 mouse.position=(1912, 519)
 sleep(2)
 mouse.press(Button.left)
@@ -253,25 +261,30 @@ sleep(3)
 mouse.release(Button.left)
 
 # Send confirmation email to Marcus
+print("Send confirmation email to Marcus")
 mouse.position=(858, 993)
 mouse.click(Button.left, 1)
 sleep(10)
 
 # Insert booking data to Google spreadsheet
+print("Insert booking data to Google spreadsheet")
 sheets.insertToSheets(preferredRoom, "08:30 - 11:30")
 print(preferredRoom)
 
 # Close incognito window
+print("Close incognito window")
 mouse.position=(1905, 48)
 mouse.click(Button.left, 2)
 sleep(2)
 
 # Close low voltage warning
+print("Close low voltage warning")
 mouse.position=(1905, 48)
 mouse.click(Button.left, 2)
 sleep(2)
 
 # Close Chromium browser
+print("Close Chromium browser")
 mouse.position=(1905, 48)
 mouse.click(Button.left, 2)
 sleep(2)

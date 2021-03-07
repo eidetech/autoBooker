@@ -15,8 +15,6 @@ def selectNewRoom(y):
         for row in reader:
             rooms[i] = (row[0])
             i = i+1
-    
-    preferredRoom = rooms[y]
 
     # Room searchbox click
     mouse.position=(220, 675)
@@ -142,6 +140,7 @@ def selectNewRoom(y):
             print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
 
-    
+
+    preferredRoom = rooms[y]
     return preferredRoom
             
