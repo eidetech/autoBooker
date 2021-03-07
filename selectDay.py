@@ -16,6 +16,8 @@ def selectNewRoom(y):
             rooms[i] = (row[0])
             i = i+1
     
+    preferredRoom = rooms[y]
+
     # Room searchbox click
     mouse.position=(220, 675)
     mouse.click(Button.left, 1)
@@ -64,7 +66,6 @@ def selectNewRoom(y):
             mouse.position=(715, 820)
             mouse.click(Button.left, 1)
             sleep(3)
-            preferredRoom = rooms[y]
         else:
             print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
@@ -77,7 +78,6 @@ def selectNewRoom(y):
             mouse.position=(715, 820)
             mouse.click(Button.left, 1)
             sleep(3)
-            preferredRoom = rooms[y]
         else:
             print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
@@ -90,7 +90,6 @@ def selectNewRoom(y):
             mouse.position=(715, 820)
             mouse.click(Button.left, 1)
             sleep(3)
-            preferredRoom = rooms[y]
         else:
             print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
@@ -103,7 +102,6 @@ def selectNewRoom(y):
             mouse.position=(715, 820)
             mouse.click(Button.left, 1)
             sleep(3)
-            preferredRoom = rooms[y]
         else:
             print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
@@ -116,7 +114,6 @@ def selectNewRoom(y):
             mouse.position=(715, 820)
             mouse.click(Button.left, 1)
             sleep(3)
-            preferredRoom = rooms[y]
         else:
             print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
@@ -129,7 +126,6 @@ def selectNewRoom(y):
             mouse.position=(715, 820)
             mouse.click(Button.left, 1)
             sleep(3)
-            preferredRoom = rooms[y]
         else:
             print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)
@@ -142,7 +138,6 @@ def selectNewRoom(y):
             mouse.position=(715, 820)
             mouse.click(Button.left, 1)
             sleep(3)
-            preferredRoom = rooms[y]
         else:
             print("Preferred room " + rooms[y] + " is booked, trying next one.")
             selectNewRoom(y+1)

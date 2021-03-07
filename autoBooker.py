@@ -130,7 +130,7 @@ if (x.strftime("%A") == "Monday"):
         sleep(3)
     else:
         print("Preferred room " + rooms[0] + " is booked, trying next one.")
-        preferredRoom = selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(1)
 elif(x.strftime("%A") == "Tuesday"):
     if(scan.scanDay("Tuesday") == False):
         # Choose next Wednesday
@@ -142,7 +142,7 @@ elif(x.strftime("%A") == "Tuesday"):
         sleep(3)
     else:
         print("Preferred room " + rooms[0] + " is booked, trying next one.")
-        preferredRoom = selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(1)
 elif(x.strftime("%A") == "Wednesday"):
     if(scan.scanDay("Wednesday") == False):
         # Choose next Thursday
@@ -154,7 +154,7 @@ elif(x.strftime("%A") == "Wednesday"):
         sleep(3)
     else:
         print("Preferred room " + rooms[0] + " is booked, trying next one.")
-        preferredRoom = selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(1)
 elif(x.strftime("%A") == "Thursday"):
     if(scan.scanDay("Thursday") == False):
         # Choose next Friday
@@ -166,7 +166,7 @@ elif(x.strftime("%A") == "Thursday"):
         sleep(3)
     else:
         print("Preferred room " + rooms[0] + " is booked, trying next one.")
-        preferredRoom = selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(1)
 elif(x.strftime("%A") == "Friday"):
     if(scan.scanDay("Friday") == False):
         # Choose next Saturday
@@ -178,7 +178,7 @@ elif(x.strftime("%A") == "Friday"):
         sleep(3)
     else:
         print("Preferred room " + rooms[0] + " is booked, trying next one.")
-        preferredRoom = selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(1)
 elif(x.strftime("%A") == "Saturday"):
     if(scan.scanDay("Saturday") == False):
         # Choose next Sunday
@@ -190,7 +190,7 @@ elif(x.strftime("%A") == "Saturday"):
         sleep(3)
     else:
         print("Preferred room " + rooms[0] + " is booked, trying next one.")
-        preferredRoom = selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(1)
 elif(x.strftime("%A") == "Sunday"):
     if(scan.scanDay("Sunday") == False):
         # Choose next Monday
@@ -202,7 +202,7 @@ elif(x.strftime("%A") == "Sunday"):
         sleep(3)
     else:
         print("Preferred room " + rooms[0] + " is booked, trying next one.")
-        preferredRoom = selectDay.selectNewRoom(0)
+        preferredRoom = selectDay.selectNewRoom(1)
 
 
 # Select end time dropdown
