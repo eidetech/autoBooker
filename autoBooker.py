@@ -204,7 +204,7 @@ elif(x.strftime("%A") == "Sunday"):
         print("Preferred room " + rooms[0] + " is booked, trying next one.")
         preferredRoom = selectDay.selectNewRoom(1)
 
-print("Room " + preferredRoom + " is clear, and selected.")
+print("Room " + str(preferredRoom) + " is clear, and selected.")
 
 # Select end time dropdown
 print("Select end time dropdown")
