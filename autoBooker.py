@@ -1,4 +1,4 @@
-# TimeEdit autoBooker v0.1
+# TimeEdit autoBooker
 # Raspberry Pi desktop
 
 # Libraries
