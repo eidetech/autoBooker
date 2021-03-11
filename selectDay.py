@@ -94,6 +94,7 @@ def selectNewRoom(y):
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Thursday"):
         if(scan.scanDay("Thursday") == False):
+            preferredRoom = rooms[y]
             # Choose next Friday
             mouse.position=(740+(4*xSkip),815)
             mouse.click(Button.left, 1)
