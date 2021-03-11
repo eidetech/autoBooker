@@ -59,6 +59,7 @@ def selectNewRoom(y):
     if (x.strftime("%A") == "Monday"):
         if(scan.scanDay("Monday") == False):
             # Choose next Tuesday
+            preferredRoom = rooms[y]
             mouse.position=(740+xSkip,815)
             mouse.click(Button.left, 1)
             sleep(3)
@@ -71,6 +72,7 @@ def selectNewRoom(y):
     elif(x.strftime("%A") == "Tuesday"):
         if(scan.scanDay("Tuesday") == False):
             # Choose next Wednesday
+            preferredRoom = rooms[y]
             mouse.position=(740+(2*xSkip),815)
             mouse.click(Button.left, 1)
             sleep(3)
@@ -83,6 +85,7 @@ def selectNewRoom(y):
     elif(x.strftime("%A") == "Wednesday"):
         if(scan.scanDay("Wednesday") == False):
             # Choose next Thursday
+            preferredRoom = rooms[y]
             mouse.position=(740+(3*xSkip),815)
             mouse.click(Button.left, 1)
             sleep(3)
@@ -94,8 +97,8 @@ def selectNewRoom(y):
             selectNewRoom(y+1)
     elif(x.strftime("%A") == "Thursday"):
         if(scan.scanDay("Thursday") == False):
-            preferredRoom = rooms[y]
             # Choose next Friday
+            preferredRoom = rooms[y]
             mouse.position=(740+(4*xSkip),815)
             mouse.click(Button.left, 1)
             sleep(3)
@@ -108,6 +111,7 @@ def selectNewRoom(y):
     elif(x.strftime("%A") == "Friday"):
         if(scan.scanDay("Friday") == False):
             # Choose next Saturday
+            preferredRoom = rooms[y]
             mouse.position=(740+(5*xSkip),815)
             mouse.click(Button.left, 1)
             sleep(3)
@@ -120,6 +124,7 @@ def selectNewRoom(y):
     elif(x.strftime("%A") == "Saturday"):
         if(scan.scanDay("Saturday") == False):
             # Choose next Sunday
+            preferredRoom = rooms[y]
             mouse.position=(740+(6*xSkip),815)
             mouse.click(Button.left, 1)
             sleep(3)
@@ -132,6 +137,7 @@ def selectNewRoom(y):
     elif(x.strftime("%A") == "Sunday"):
         if(scan.scanDay("Sunday") == False):
             # Choose next Monday
+            preferredRoom = rooms[y]
             mouse.position=(740,815)
             mouse.click(Button.left, 1)
             sleep(3)
