@@ -8,7 +8,7 @@ def selectNewRoom(y):
     import datetime
     import csv
 
-    preferredRoom = 0
+    global preferredRoom
     rooms = {}
     i = 0
     with open('/home/pi/autoBooker/preferredRooms.csv', 'r') as f:
