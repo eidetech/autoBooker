@@ -270,6 +270,7 @@ sleep(10)
 print("Insert booking data to Google spreadsheet")
 sheets.insertToSheets(preferredRoom, "08:30 - 11:30")
 print(preferredRoom)
+sleep(2)
 
 # Close incognito window
 print("Close incognito window")
