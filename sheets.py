@@ -1,8 +1,10 @@
 def insertToSheets(room, time):
     import gspread # pip install gspread
+    import datetime
+    currentTime  = datetime.datetime.now().strftime("%d/%m/%Y, %H:%M")
 
     # Variable gc stores the credential info from the credentials file (JSON)
-    gc = gspread.service_account(filename='/home/pi/autoBooker/credentials.json')
+    gc = gspread.service_account(filename='credentials.json')
     # Variable sh stores the key to the specific worksheet (from URL)
     sh = gc.open_by_key('1PF8u1zsIfxwgVQ7HzSBXVOaQBf1z3PiXdIXXLeSkc7M')
 
@@ -11,8 +13,8 @@ def insertToSheets(room, time):
     backend = sh.worksheet("backend")
 
     # New entry data
-    # room = "C3 090"
-    # time = "08:30 - 11:30"
+    #room = "C3 090"
+    #time = "08:30 - 11:30"
 
     # Get the row to put the booked room details into from backend sheet
     todaysRow = backend.acell('A2').value
@@ -39,4 +41,4 @@ def insertToSheets(room, time):
         backend.update('A2', (nextRow))
 
 
-    worksheet.update("C"+str(todaysRow)+":D"+str(todaysRow), [[room, time]])
+    worksheet.update("C"+str(todaysRow)+":E"+str(todaysRow), [[room, time, "autoBooker @ " + currentTime]])
