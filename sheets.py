@@ -41,4 +41,4 @@ def insertToSheets(room, time):
         backend.update('A2', (nextRow))
 
 
-    worksheet.update("C"+str(todaysRow)+":E"+str(todaysRow), [[room, time, "autoBooker @ " + currentTime]])
+    worksheet.update("C"+str(todaysRow)+":E"+str(todaysRow), [[room, time, "autoBookerZZ @ " + currentTime]])
