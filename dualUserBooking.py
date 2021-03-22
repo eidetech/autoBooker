@@ -1,4 +1,4 @@
-def dualUserBooking(room):
+def nextUser(room):
     # Libraries
     from sys import path
     path.append("/home/pi/autoBooker/")
@@ -114,7 +114,7 @@ def dualUserBooking(room):
             mouse.position=(740+xSkip,815)
             mouse.click(Button.left, 1)
             sleep(3)
-            mouse.position=(715, 820)
+            mouse.position=(1057, 820)
             mouse.click(Button.left, 1)
             sleep(3)
     elif(x.strftime("%A") == "Tuesday"):
@@ -122,7 +122,7 @@ def dualUserBooking(room):
             mouse.position=(740+(2*xSkip),815)
             mouse.click(Button.left, 1)
             sleep(3)
-            mouse.position=(715, 820)
+            mouse.position=(1057, 820)
             mouse.click(Button.left, 1)
             sleep(3)
     elif(x.strftime("%A") == "Wednesday"):
@@ -130,7 +130,7 @@ def dualUserBooking(room):
             mouse.position=(740+(3*xSkip),815)
             mouse.click(Button.left, 1)
             sleep(3)
-            mouse.position=(715, 820)
+            mouse.position=(1057, 820)
             mouse.click(Button.left, 1)
             sleep(3)
     elif(x.strftime("%A") == "Thursday"):
@@ -138,7 +138,7 @@ def dualUserBooking(room):
             mouse.position=(740+(4*xSkip),815)
             mouse.click(Button.left, 1)
             sleep(3)
-            mouse.position=(715, 820)
+            mouse.position=(1057, 820)
             mouse.click(Button.left, 1)
             sleep(3)
     elif(x.strftime("%A") == "Friday"):
@@ -146,7 +146,7 @@ def dualUserBooking(room):
             mouse.position=(740+(5*xSkip),815)
             mouse.click(Button.left, 1)
             sleep(3)
-            mouse.position=(715, 820)
+            mouse.position=(1057, 820)
             mouse.click(Button.left, 1)
             sleep(3)
     elif(x.strftime("%A") == "Saturday"):
@@ -154,7 +154,7 @@ def dualUserBooking(room):
             mouse.position=(740+(6*xSkip),815)
             mouse.click(Button.left, 1)
             sleep(3)
-            mouse.position=(715, 820)
+            mouse.position=(1057, 820)
             mouse.click(Button.left, 1)
             sleep(3)
     elif(x.strftime("%A") == "Sunday"):
@@ -162,7 +162,7 @@ def dualUserBooking(room):
             mouse.position=(740,815)
             mouse.click(Button.left, 1)
             sleep(3)
-            mouse.position=(715, 820)
+            mouse.position=(1057, 820)
             mouse.click(Button.left, 1)
             sleep(3)
 
@@ -171,8 +171,8 @@ def dualUserBooking(room):
     mouse.position=(856, 775)
     mouse.click(Button.left, 1)
     sleep(2)
-    # Select 1130 end time
-    print("Select 1130 end time")
+    # Select 15:15 end time
+    print("Select 15:15 end time")
     mouse.position=(861, 1007)
     mouse.click(Button.left, 1)
     sleep(2)
@@ -228,7 +228,7 @@ def dualUserBooking(room):
 
     # Insert booking data to Google spreadsheet
     print("Insert booking data to Google spreadsheet")
-    sheets.insertToSheets(preferredRoom, "08:30 - 11:30")
+    sheets.insertToSheets(preferredRoom, "08:30 - 15:15", True)
     print(preferredRoom)
     sleep(2)
 

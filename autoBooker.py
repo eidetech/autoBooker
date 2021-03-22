@@ -7,6 +7,7 @@ path.append("/home/pi/autoBooker/")
 import RGBreader
 import selectDay
 import sheets
+import dualUserBooking
 import scan
 import time
 import random
@@ -268,7 +269,7 @@ sleep(10)
 
 # Insert booking data to Google spreadsheet
 print("Insert booking data to Google spreadsheet")
-sheets.insertToSheets(preferredRoom, "08:30 - 11:30")
+sheets.insertToSheets(preferredRoom, "08:30 - 11:30", False)
 print(preferredRoom)
 sleep(2)
 
@@ -289,3 +290,6 @@ print("Close Chromium browser")
 mouse.position=(1905, 48)
 mouse.click(Button.left, 2)
 sleep(2)
+
+print("Next user:")
+dualUserBooking.nextUser(preferredRoom)
