@@ -31,7 +31,7 @@ D3 061
   - sheets.py - Google Sheets integration &#8594; interts booking data to spreadsheet.
   - dualUserBooking.py - Second user booking function
 
-## Tasks
+## Backlog
 - [x] Initial concept!
 - [x] Avoid already booked rooms detection
 - [x] If room is already booked: choose new room from a list of preferred rooms
