@@ -4,7 +4,7 @@ def insertToSheets(room, time):
     currentTime  = datetime.datetime.now().strftime("%d/%m/%Y, %H:%M")
 
     # Variable gc stores the credential info from the credentials file (JSON)
-    gc = gspread.service_account(filename='credentials.json')
+    gc = gspread.service_account(filename='/home/pi/autoBooker/credentials.json')
     # Variable sh stores the key to the specific worksheet (from URL)
     sh = gc.open_by_key('1PF8u1zsIfxwgVQ7HzSBXVOaQBf1z3PiXdIXXLeSkc7M')
 
