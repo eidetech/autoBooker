@@ -3,6 +3,8 @@
 TimeEdit autoBooker script
 
 ## Installation
+Make sure that the pip path is the same as python install path.
+https://nomodulenamed.com/a/I-have-installed-the-package-using-pip
 ```bash
 python3 -m pip install pyautogui
 python3 -m pip install pynput
