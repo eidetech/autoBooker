@@ -12,9 +12,13 @@ python3 -m pip install gspread
 ## Usage
 Put preferred rooms in preferredRooms.csv, one room per line.
 ```csv
+A2 071
 C3 090
 C3 091
 C3 092
+A2 043
+D3 060
+D3 061
 ```
 
 ## File structure/hierarchy
