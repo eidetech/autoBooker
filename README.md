@@ -23,12 +23,13 @@ C3 092
   - scan.py - Function to completely scan the day block to be booked in TimeEdit.
     - RGBchecker.py - Check if room is already booked. Used by scan.py
   - sheets.py - Google Sheets integration &#8594; interts booking data to spreadsheet.
+  - dualUserBooking.py - Second user booking function
 
 ## Tasks
 - [x] Initial concept!
 - [x] Avoid already booked rooms detection
 - [x] If room is already booked: choose new room from a list of preferred rooms
-- [ ] Dual user booking
+- [x] Dual user booking
 - [x] Automatic Google Sheets integration (Sheets API) 
 - [ ] Automatic Google Calendar integration (Calendar API)
 ## Check number of code lines
@@ -39,4 +40,5 @@ git ls-files | xargs wc -l
 Checkpoints: 
 1. 15.02.2021 &#8594; 471 lines of code
 2. 05.03.2021 &#8594; 635 lines of code
+3. 22.03.2021 &#8594; 937 lines of code
 
