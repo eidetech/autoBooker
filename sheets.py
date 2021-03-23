@@ -1,4 +1,4 @@
-def insertToSheets(room, time):
+def insertToSheets(room, time, secondUser):
     import gspread # pip install gspread
     import datetime
     currentTime  = datetime.datetime.now().strftime("%d/%m/%Y, %H:%M")
@@ -17,7 +17,12 @@ def insertToSheets(room, time):
     #time = "08:30 - 11:30"
 
     # Get the row to put the booked room details into from backend sheet
-    todaysRow = backend.acell('A2').value
+    if(secondUser == True):
+        todaysRow = str(int(backend.acell('A2').value)-1)
+        print("Second user booking: Todays row in sheets is: " + str(todaysRow))
+    else:
+        todaysRow = backend.acell('A2').value
+        print("First user booking: Todays row in sheets is: " + str(todaysRow))
 
     # Return all row numbers that are weekend days:
     weekendDays = backend.col_values(2)
