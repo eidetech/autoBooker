@@ -1,7 +1,3 @@
-[![Stargazers][stars-shield]][stars-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
-[![License][license-shield]][license-url]
 <a href="#"><img src="https://www.timeedit.net/assets/images/te_icon_gradient_vit_rounded@1x.png" width="50" height="50"></a> 
 # autoBooker
 TimeEdit autoBooker script
@@ -51,17 +47,3 @@ Checkpoints:
 1. 15.02.2021 &#8594; 471 lines of code
 2. 05.03.2021 &#8594; 635 lines of code
 3. 22.03.2021 &#8594; 937 lines of code
-
-<!-- MARKDOWN LINKS & IMAGES -->
-
-[forks-shield]:https://img.shields.io/github/forks/laukik-hase/OTA_update_STM32_using_ESP32
-[forks-url]: https://github.com/laukik-hase/OTA_update_STM32_using_ESP32/network/members
-
-[stars-shield]: https://img.shields.io/github/stars/laukik-hase/OTA_update_STM32_using_ESP32
-[stars-url]: https://github.com/laukik-hase/OTA_update_STM32_using_ESP32/stargazers
-
-[issues-shield]: https://img.shields.io/github/issues/laukik-hase/OTA_update_STM32_using_ESP32
-[issues-url]: https://github.com/laukik-hase/OTA_update_STM32_using_ESP32/issues
-
-[license-shield]: https://img.shields.io/github/license/laukik-hase/OTA_update_STM32_using_ESP32
-[license-url]: https://github.com/laukik-hase/OTA_update_STM32_using_ESP32/blob/master/LICENSE
