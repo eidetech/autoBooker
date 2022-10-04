@@ -1,3 +1,7 @@
+[![Stargazers][stars-shield]][stars-url]
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]
+[![License][license-shield]][license-url]
 <a href="#"><img src="https://www.timeedit.net/assets/images/te_icon_gradient_vit_rounded@1x.png" width="50" height="50"></a> 
 # autoBooker
 TimeEdit autoBooker script
